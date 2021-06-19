@@ -9,8 +9,14 @@
     [<a href="{% url 'editar_parroquia' e.id %}">editar</a>] -
       <ul>
         {% for t in e.barrios.all %}
-          <li>
-            <span>{{t.nombre}} - {{t.num_viviendas}} - {{t.num_parques}} [<a href="{% url 'editar_barrio' t.id %}">editar</a>] </span>
+        <li> 
+            <span><b>{{t.nombre}}</b>
+              <ul>
+                <li>Número de viviendas: {{t.num_viviendas}}</li>
+                <li>Número de parques:{{t.num_parques}}</li>
+                <li>Número de edicios:{{t.num_edificios}}</li>
+              </ul>
+               [<a href="{% url 'editar_barrio' t.id %}">editar</a>] </span>
           </li>
         {% endfor %} 
       </ul>

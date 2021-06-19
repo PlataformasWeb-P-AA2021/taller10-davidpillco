@@ -110,7 +110,7 @@ def editar_barrio(request, id):
         formulario = BarrioForm(instance=barrio)
     diccionario = {'formulario': formulario}
 
-    return render(request, 'crearBarrio.html', diccionario) 
+    return render(request, 'editarBarrio.html', diccionario) 
 
 def crear_barrio_parroquia(request, id):
     """

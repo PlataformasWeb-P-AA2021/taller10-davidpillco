@@ -35,7 +35,7 @@ class Barrio (models.Model):
     num_parques = models.IntegerField("Número de parques",
             choices=opciones_parques) 
     num_edificios = models.IntegerField("Número de Edificios")
-    parroquia = models.ForeignKey(Parroquia, related_name='lasparroquias',
+    parroquia = models.ForeignKey(Parroquia, related_name='barrios',
         on_delete=models.CASCADE )
 
     def __str__(self):
